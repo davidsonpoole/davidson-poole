@@ -1,23 +1,10 @@
 .home {
-    text-align: center;
-    display: table;
+    display: inline-block;
     height: 100vh;
-    width: 100vw;
 }
 
 .center {
-    display: table-cell;
-    margin: 0 auto;
-}
-.button {
-    width: 200px;
-    height: 40px;
-    background-color: black;
-    border-radius: 50px;
-}
-
-.spacing {
-    height: 5px;
+    display: inline-block;
 }
 h1 {
     font-size: 40px;
@@ -26,5 +13,4 @@ h1 {
 
 }
 h5 {
-    border-bottom: 1px solid black;
 }

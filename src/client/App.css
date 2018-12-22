@@ -1,0 +1,40 @@
+.header {
+    position: fixed;
+    zIndex: 1;
+    width: 100%;
+    background: white;
+}
+
+.logo {
+    display: inline-block;
+    height: 64px;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+.logoContainer {
+    margin: 0;
+    padding: 0 5px;
+    text-align: left;
+}
+
+.menu {
+    line-height: 64px;
+}
+
+.content {
+    margin-top: 64px;
+    padding: 0 100px;
+}
+
+.contentDiv {
+    background: white;
+    padding: 24px;
+    min-height: 380px;
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+}
