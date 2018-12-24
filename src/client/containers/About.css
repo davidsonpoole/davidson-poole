@@ -1,0 +1,37 @@
+.home {
+    display: inline-block;
+    height: 100vh;
+}
+
+.center {
+    display: inline-block;
+}
+h1 {
+    font-size: 50px;
+    font-family: 'Bellefair', serif;
+    margin-bottom: 0px;
+    margin-top: 20px;
+
+}
+p {
+    font-family: 'Bellefair', serif;
+    font-size: 20px;
+    padding: 0 150px 0 150px;
+}
+
+.logo {
+    height: 300px;
+}
+
+h3 {
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+.aboutMe {
+    font-family: 'Bellefair', serif;
+}
+
+button {
+    width: 400px;
+}

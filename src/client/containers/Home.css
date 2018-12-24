@@ -3,17 +3,6 @@
     height: 100vh;
 }
 
-.center {
-    display: inline-block;
-}
-h1 {
-    font-size: 50px;
-    font-family: 'Bellefair';
-    margin-bottom: 0px;
-    margin-top: 50px;
-
-}
-h2 {
-    font-family: 'Bellefair';
-    font-size: 20px;
+.content {
+    font-family: 'Bellefair', serif;
 }
