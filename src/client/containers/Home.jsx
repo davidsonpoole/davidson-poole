@@ -9,11 +9,12 @@ class Home extends Component {
     render() {
         return (
             <div className={styles.home}>
+                <link href='https://fonts.googleapis.com/css?family=Bellefair' rel='stylesheet' />
                 <div className={styles.center}>
                     <h1>
-                        Davidson Poole
+                        Hi, I'm Davidson.
                     </h1>
-                    <h5>Website Architect, Musician, and Caring Friend</h5>
+                    <h2>I'm a web developer, musician, and college student.</h2>
                 </div>
             </div>
         );
