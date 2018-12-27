@@ -3,7 +3,10 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import { Layout, Menu } from 'antd';
 import About from './containers/About';
 import Home from './containers/Home';
+import Resume from './containers/Resume';
+import Resources from './containers/Resources';
 import styles from './App.css';
+import Contact from "./containers/Contact"
 
 const { Header, Content, Footer } = Layout;
 const { Item } = Menu;
@@ -26,9 +29,9 @@ class App extends Component {
                         </div>
                         <Menu theme="light" mode="horizontal" className={styles.menu}>
                             <Item key="1"><Link to="/about">About Me</Link></Item>
-                            <Item key="2">Resume</Item>
-                            <Item key="3">Helpful Resources</Item>
-                            <Item key="4">Contact</Item>
+                            <Item key="2"><Link to="/resume">Resume</Link></Item>
+                            <Item key="3"><Link to="/resources">Helpful Resources</Link></Item>
+                            <Item key="4"><Link to="/contact">Contact</Link></Item>
                         </Menu>
                     </Header>
                     <Content className={styles.content}>
@@ -36,6 +39,9 @@ class App extends Component {
                             <Switch>
                                 <Route exact path="/" component={Home} />
                                 <Route path="/about" component={About} />
+                                <Route path="/resume" component={Resume} />
+                                <Route path="/resources" component={Resources} />
+                                <Route path="/contact" component={Contact} />
                             </Switch>
                         </div>
                     </Content>

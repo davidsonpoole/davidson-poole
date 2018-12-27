@@ -14,10 +14,10 @@ class About extends Component {
                 <link href='https://fonts.googleapis.com/css?family=Bellefair' rel='stylesheet' />
                 <div className={styles.center}>
                     <img src={ logo } className={ styles.logo } alt=""></img>
-                    <h1>
+                    <h1 className={styles.opener}>
                         Hi, I'm Davidson.
                     </h1>
-                    <p>
+                    <p className={styles.aboutP}>
                         I'm a web developer, musician, and college student. I'm just gonna start typing random stuff
                         so that I can get an idea of how I want the page to look. Some people do this with
                         Lorem ipsum, which is just a meaningless language to be a placeholder for text,
@@ -35,8 +35,8 @@ class About extends Component {
                         text appears longer, but I kind of like how it is now. I guess I will just have to write more.
                     </p>
                     <div className={styles.aboutMe}>
-                        <h3>I'm going to put a button below this.</h3>
-                        <Button type="default" size="large">Button</Button>
+                        <h3 className={styles.h3}>I'm going to put a button below this.</h3>
+                        <Button type="default" size="large" className={styles.button}>Button</Button>
                     </div>
                 </div>
             </div>

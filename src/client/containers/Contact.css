@@ -1,0 +1,9 @@
+.home {
+    display: inline-block;
+    height: 100vh;
+}
+
+.title {
+    color: black;
+    text-align: center;
+}

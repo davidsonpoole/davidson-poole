@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styles from './Home.css';
 import { Button, Row, Col } from 'antd';
-import background from '../background.jpg';
 
 class Home extends Component {
     constructor(props) {
@@ -13,18 +12,18 @@ class Home extends Component {
             <div className={styles.home}>
                 <link href='https://fonts.googleapis.com/css?family=Bellefair' rel='stylesheet' />
                 <div className={styles.container}>
-                        <h1>This is the Home Page.</h1>
+                        <h1 className={styles.h1}>This is the Home Page.</h1>
                 </div>
 
 
                 <div className={styles.content}>
 
                     <Col>
-                        <Row className={styles.row}><Button type="default" size={"large"} onClick={ () => alert("You clicked the first button!")}>First button</Button></Row>
-                        <Row className={styles.row}><Button type="default" size={"large"} onClick={ () => alert("You clicked the second button!")}>Second button</Button></Row>
-                        <Row className={styles.row}><Button type="default" size={"large"} onClick={ () => alert("You clicked the third button!")}>Third button</Button></Row>
+                        <Row className={styles.row}><Button type="default" size={"large"} className={styles.button} onClick={ () => alert("You clicked the first button!")}>First button</Button></Row>
+                        <Row className={styles.row}><Button type="default" size={"large"} className={styles.button} onClick={ () => alert("You clicked the second button!")}>Second button</Button></Row>
+                        <Row className={styles.row}><Button type="default" size={"large"} className={styles.button} onClick={ () => alert("You clicked the third button!")}>Third button</Button></Row>
                     </Col>
-                    <p>Blah blah blah blah blah, I am just randomly typing text so that I can get a good idea of how the page looks. I will
+                    <p className={styles.p}>Blah blah blah blah blah, I am just randomly typing text so that I can get a good idea of how the page looks. I will
                     explain what it will be like if we live 50 years in the future. AI will basically make life so convenient for
                     everyone that it will start to control us. Spotify will no longer be recommended songs based on your interests,
                     they would be giving you the interests that you have. There will be so much data on you that companies

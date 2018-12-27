@@ -1,11 +1,9 @@
-const express = require("express")
-const os = require("os")
-const path = require("path")
+const Express = require('express')
+const os = require('os')
+const path = require('path')
 
-const app = express();
-app.get("/react", function(req,res) {
-    app.send("react.png")
-})
-app.listen(8080, () => console.log("Listening on port 8080!"))
+const app = Express();
+app.get('/react', (req, res) => res.send('react.png'))
+app.use(Express.static(path.join(__dirname, '../../public')))
 
-app.get("/", (req, res) => res.sendFile(path.join(__dirname + "index.html")))
+app.listen(8000, () => console.log('Listening on port 8000!'))
