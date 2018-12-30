@@ -1,9 +1,13 @@
 .home {
-    display: inline-block;
     height: 100vh;
 }
 
 .title {
     color: black;
     text-align: center;
+}
+
+.input {
+    width: 500px;
+    height: 100px;
 }

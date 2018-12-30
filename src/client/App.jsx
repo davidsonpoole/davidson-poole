@@ -4,7 +4,7 @@ import { Layout, Menu } from 'antd';
 import About from './containers/About';
 import Home from './containers/Home';
 import Resume from './containers/Resume';
-import Resources from './containers/Resources';
+import Blog from './containers/Blog';
 import styles from './App.css';
 import Contact from "./containers/Contact"
 
@@ -30,7 +30,7 @@ class App extends Component {
                         <Menu theme="light" mode="horizontal" className={styles.menu}>
                             <Item key="1"><Link to="/about">About Me</Link></Item>
                             <Item key="2"><Link to="/resume">Resume</Link></Item>
-                            <Item key="3"><Link to="/resources">Helpful Resources</Link></Item>
+                            <Item key="3"><Link to="/blog">Blog</Link></Item>
                             <Item key="4"><Link to="/contact">Contact</Link></Item>
                         </Menu>
                     </Header>
@@ -40,7 +40,7 @@ class App extends Component {
                                 <Route exact path="/" component={Home} />
                                 <Route path="/about" component={About} />
                                 <Route path="/resume" component={Resume} />
-                                <Route path="/resources" component={Resources} />
+                                <Route path="/blog" component={Blog} />
                                 <Route path="/contact" component={Contact} />
                             </Switch>
                         </div>
