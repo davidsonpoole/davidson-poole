@@ -28,16 +28,18 @@ class App extends Component {
                             </Link>
                         </div>
                         <Menu theme="light" mode="horizontal" className={styles.menu}>
-                            <Item key="1"><Link to="/about">About Me</Link></Item>
-                            <Item key="2"><Link to="/resume">Resume</Link></Item>
-                            <Item key="3"><Link to="/blog">Blog</Link></Item>
-                            <Item key="4"><Link to="/contact">Contact</Link></Item>
+                            <Item className={styles.item} key="1"><Link to="/about">About Me</Link></Item>
+                            <Item className={styles.item} key="2"><Link to="/resume">Resume</Link></Item>
+                            <Item className={styles.item} key="3"><Link to="/blog">Blog</Link></Item>
+                            <Item className={styles.item} key="4"><Link to="/contact">Contact</Link></Item>
                         </Menu>
                     </Header>
                     <Content className={styles.content}>
                         <div className={styles.contentDiv}>
                             <Switch>
-                                <Route exact path="/" component={Home} />
+                                <Route exact path="/">
+                                    <Home className={styles.home} />
+                                </Route>
                                 <Route path="/about" component={About} />
                                 <Route path="/resume" component={Resume} />
                                 <Route path="/blog" component={Blog} />

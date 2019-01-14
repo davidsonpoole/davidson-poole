@@ -25,19 +25,27 @@
 .menu {
     line-height: 64px;
     text-align: center;
-    width: 90vw;
+    width: 100%;
+    padding-right: 10vw;
+}
+
+.item {
+    padding: 0 50px 0 50px;
 }
 
 .content {
-    margin-top: 64px;
-    padding: 0 100px;
+    padding-top: 64px;
+}
+
+.home {
+    padding: 20%;
 }
 
 .contentDiv {
     background: white;
-    padding: 24px;
     min-height: 380px;
     text-align: center;
+    padding: 0 0 30px 0;
 }
 
 .footer {
