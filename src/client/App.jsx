@@ -14,13 +14,49 @@ const { Item } = Menu;
 class App extends Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            check: null
+        }
+        this.updateBlog = this.updateBlog.bind(this);
+
+    }
+
+    componentDidMount() {
+        if (location.pathname === "/blog") {
+            this.setState({
+                check: {
+                    padding: '30px 30px 0 30px'
+                }
+            })
+        }
+    }
+
+    updateBlog() {
+        if (location.pathname === "/blog") {
+            this.setState({
+                check: {
+                    padding: '30px 30px 0 30px'
+                }
+            })
+        }
     }
 
     render() {
+        /*let check;
+        if (location.pathname === "/blog") {
+            check = {
+                padding: '30px 30px 0 30px'
+            }
+        }*/
+        const { check } = this.state;
+
         return (
             <Router>
                 <Layout>
                     <link href='https://fonts.googleapis.com/css?family=Bellefair' rel='stylesheet' />
+                    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" />
+                    <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet" />
                     <Header className={styles.header}>
                         <div className={styles.logoContainer}>
                             <Link to="/" onClick={ () => Menu.props.selectedKeys = []}>
@@ -28,13 +64,13 @@ class App extends Component {
                             </Link>
                         </div>
                         <Menu theme="light" mode="horizontal" className={styles.menu}>
-                            <Item className={styles.item} key="1"><Link to="/about">About Me</Link></Item>
+                            <Item className={styles.item} key="1" ><Link to="/about">About Me</Link></Item>
                             <Item className={styles.item} key="2"><Link to="/resume">Resume</Link></Item>
-                            <Item className={styles.item} key="3"><Link to="/blog">Blog</Link></Item>
+                            <Item className={styles.item} key="3" onClick={this.updateBlog}><Link to="/blog">Blog</Link></Item>
                             <Item className={styles.item} key="4"><Link to="/contact">Contact</Link></Item>
                         </Menu>
                     </Header>
-                    <Content className={styles.content}>
+                    <Content className={styles.content} style={check}>
                         <div className={styles.contentDiv}>
                             <Switch>
                                 <Route exact path="/">
@@ -47,7 +83,7 @@ class App extends Component {
                             </Switch>
                         </div>
                     </Content>
-                    <Footer className={styles.footer}>Davidson Poole &copy; 2018</Footer>
+                    <Footer className={styles.footer}>Davidson Poole &copy; 2018. Made with ReactJS and Antd</Footer>
                 </Layout>
             </Router>
         );

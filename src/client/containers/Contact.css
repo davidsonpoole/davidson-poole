@@ -1,6 +1,7 @@
 .home {
     display: inline-block;
     height: 100vh;
+    padding-top: 15px;
 }
 
 .title {
