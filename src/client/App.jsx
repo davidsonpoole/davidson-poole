@@ -14,46 +14,12 @@ const { Item } = Menu;
 class App extends Component {
     constructor(props) {
         super(props);
-
-        this.state = {
-            check: null
-        }
-        this.updateBlog = this.updateBlog.bind(this);
-
-    }
-
-    componentDidMount() {
-        if (location.pathname === "/blog") {
-            this.setState({
-                check: {
-                    padding: '30px 30px 0 30px'
-                }
-            })
-        }
-    }
-
-    updateBlog() {
-        if (location.pathname === "/blog") {
-            this.setState({
-                check: {
-                    padding: '30px 30px 0 30px'
-                }
-            })
-        }
     }
 
     render() {
-        /*let check;
-        if (location.pathname === "/blog") {
-            check = {
-                padding: '30px 30px 0 30px'
-            }
-        }*/
-        const { check } = this.state;
-
         return (
             <Router>
-                <Layout>
+                <Layout className={styles.container}>
                     <link href='https://fonts.googleapis.com/css?family=Bellefair' rel='stylesheet' />
                     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" />
                     <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet" />
@@ -66,22 +32,18 @@ class App extends Component {
                         <Menu theme="light" mode="horizontal" className={styles.menu}>
                             <Item className={styles.item} key="1" ><Link to="/about">About Me</Link></Item>
                             <Item className={styles.item} key="2"><Link to="/resume">Resume</Link></Item>
-                            <Item className={styles.item} key="3" onClick={this.updateBlog}><Link to="/blog">Blog</Link></Item>
+                            <Item className={styles.item} key="3"><Link to="/blog">Blog</Link></Item>
                             <Item className={styles.item} key="4"><Link to="/contact">Contact</Link></Item>
                         </Menu>
                     </Header>
-                    <Content className={styles.content} style={check}>
-                        <div className={styles.contentDiv}>
-                            <Switch>
-                                <Route exact path="/">
-                                    <Home className={styles.home} />
-                                </Route>
-                                <Route path="/about" component={About} />
-                                <Route path="/resume" component={Resume} />
-                                <Route path="/blog" component={Blog} />
-                                <Route path="/contact" component={Contact} />
-                            </Switch>
-                        </div>
+                    <Content className={styles.content}>
+                        <Switch>
+                            <Route exact path="/" component={Home} />
+                            <Route path="/about" component={About} />
+                            <Route path="/resume" component={Resume} />
+                            <Route path="/blog" component={Blog} />
+                            <Route path="/contact" component={Contact} />
+                        </Switch>
                     </Content>
                     <Footer className={styles.footer}>Davidson Poole &copy; 2018. Made with ReactJS and Antd</Footer>
                 </Layout>

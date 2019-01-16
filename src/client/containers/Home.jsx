@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Button } from 'antd';
 import styles from './Home.css';
-import profilePic from '../images/profilePic.jpg';
+
 
 class Home extends Component {
     constructor(props) {
@@ -41,12 +40,18 @@ class Home extends Component {
                     </div>
                 </div>
                 <div className={styles.container} style={{ backgroundColor: "#626363" }}>
-                    <h1 className={styles.header} style={{ color: "white", fontSize: "35px" }}>Languages and Frameworks:</h1>
+                    <h1 className={styles.header} style={{ color: "white", fontSize: "35px" }}>Helpful Resources</h1>
                     <div className={styles.area}>
-                        <p className={styles.p} style={{ color: "white" }}>My paragraph</p>
+                        <ul className={styles.ul}>
+                            <li><a className={styles.link} href="https://www.w3schools.com/tags/ref_urlencode.asp" target="_blank">
+                                URL Encodings</a></li>
+                            <li><a className={styles.link} href="https://www.restapitutorial.com/httpstatuscodes.html" target="_blank">
+                            HTTP Status Codes</a></li>
+                            <li><a className={styles.link} href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">
+                                A Complete Guide to Flexbox</a></li>
+                        </ul>
                     </div>
                 </div>
-                <Button type="primary" style={{ marginTop: 20 }}>Click Me</Button>
             </div>
         )
     }

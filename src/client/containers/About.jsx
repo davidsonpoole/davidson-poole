@@ -13,13 +13,13 @@ class About extends Component {
             <div className={styles.home}>
                 <link href='https://fonts.googleapis.com/css?family=Bellefair' rel='stylesheet' />
                 <div className={styles.center}>
-                    <img src={logo} className={styles.logo} alt="" style={{padding: "5% 0 0 5%"}}/>
+                    <img src={logo} className={styles.logo} alt=""/>
                     <div>
                         <h1 className={styles.opener}>
                             Hi, I'm Davidson.
                         </h1>
                         <p className={styles.aboutP}>
-                            I was born and raised in Bonaire, GA, an unincorporated town near the military base in Warner Robins, GA.
+                            I was born and raised in Bonaire, GA, an unincorporated town in central Georgia.
                             Even when I was young, I was fascinated with computers. I spent hours (unsuccessfully) trying to install
                             custom firmware on my PSP, just so that I could say I "hacked my PSP". I worked tirelessly trying to
                             jailbreak my iPod Touch 4th Gen (this time successfully), so that I could install custom icons and add new
