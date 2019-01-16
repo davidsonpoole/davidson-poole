@@ -3,7 +3,6 @@ const bodyParser = require('body-parser')
 const os = require('os')
 const path = require('path')
 const cors = require('cors')
-const postController = require('./controllers').posts
 
 const app = Express();
 app.use(bodyParser.json());
