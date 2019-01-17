@@ -23,6 +23,11 @@
     margin-left: 40px;
 }
 
+.imgWrapper {
+    height: 400px;
+    width: 400px;
+}
+
 .logo {
     height: 400px;
     width: 400px;

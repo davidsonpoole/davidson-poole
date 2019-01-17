@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styles from './Contact.css'
+import { Input, Button, Icon } from 'antd'
 
 class Contact extends Component {
     constructor(props) {
@@ -9,7 +10,15 @@ class Contact extends Component {
     render() {
         return (
             <div className={styles.home}>
-                <h1 className={styles.title}>Contact</h1>
+                <div className={styles.container}>
+                    <h1>Want to collaborate?</h1>
+                    <p><Icon type="right" />Send me a message</p>
+                </div>
+                <div className={styles.inputs}>
+                    <Input placeholder="Name"/>
+                    <Input placeholder="Subject" />
+                    <Input placeholder="Message" />
+                </div>
             </div>
         )
     }

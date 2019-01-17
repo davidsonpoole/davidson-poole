@@ -13,7 +13,9 @@ class About extends Component {
             <div className={styles.home}>
                 <link href='https://fonts.googleapis.com/css?family=Bellefair' rel='stylesheet' />
                 <div className={styles.center}>
-                    <img src={logo} className={styles.logo} alt=""/>
+                    <div className={styles.imgWrapper}>
+                        <img src={logo} className={styles.logo} alt=""/>
+                    </div>
                     <div>
                         <h1 className={styles.opener}>
                             Hi, I'm Davidson.
