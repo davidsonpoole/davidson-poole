@@ -6,7 +6,7 @@
 }
 
 .inputs {
-    width: 25vw;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,16 +14,39 @@
 }
 
 .inputs Input {
-    width: 80%;
+    width: 90vw;
+    max-width: 300px;
+    margin-bottom: 2vh;
+}
+
+.inputs TextArea {
+    width: 90vw;
+    max-width: 600px;
+    height: 20vh;
+}
+
+.inputs Button {
+    width: 60vw;
+    max-width: 200px;
+    height: 6vh;
+    margin-top: 5vh;
+    border-radius: 30px;
+}
+
+.inputs h1 {
+    font-family: 'Zilla Slab', serif;
+    font-weight: bold;
+    font-size: 350%;
 }
 
 
 .container {
-    width: 75vw;
+    width: 100vw;
     background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     color: black;
 }
 
@@ -33,7 +56,12 @@
     font-size: 350%;
 }
 
-.container p {
+.container Button {
     font-family: 'Quicksand', sans-serif;
     font-size: 150%;
+    border-radius: 40px;
+    transition: all 0.5s;
+    height: 7vh;
+    width: 80vw;
+    max-width: 300px;
 }
