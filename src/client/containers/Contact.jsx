@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styles from './Contact.css'
-import { Input, Button } from 'antd'
+import { Input, Button, message } from 'antd'
 import axios from 'axios'
 
 class Contact extends Component {
@@ -16,6 +16,14 @@ class Contact extends Component {
         this.subjectInput = React.createRef()
         this.handleChange = this.handleChange.bind(this)
         this.send = this.send.bind(this)
+    }
+
+    componentDidMount() {
+        message.config({
+            top: 100,
+            duration: 5,
+            maxCount: 1
+        })
     }
 
     handleChange(e) {
@@ -46,12 +54,14 @@ class Contact extends Component {
                 .then(result => {
                     console.log(result)
                     // TODO redirect user after successful post
+                    message.success("You sent the post")
                     this.setState({ messageInput: '' })
                     this.nameInput.current.input.value = ''
                     this.subjectInput.current.input.value = ''
                 })
                 .catch(error => {
                     console.log(error)
+                    message.error("Email failed")
                 })
         }
     }
@@ -72,7 +82,7 @@ class Contact extends Component {
                         <h1>Great!</h1>
                         <Input placeholder="Name" ref={this.nameInput} visible="false"/>
                         <Input placeholder="Subject" ref={this.subjectInput} />
-                        <TextArea placeholder="Message" onChange={this.handleChange} />
+                        <TextArea placeholder="Message" onChange={this.handleChange} value={this.state.messageInput} />
                         <Button type="primary" onClick={this.send}>Send</Button>
                     </div>
                 ) : null }

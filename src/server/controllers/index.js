@@ -1,5 +1,7 @@
-const posts = require('./blog')
+const blogs = require('./blog')
+const emails = require('./email')
 
 module.exports = {
-    posts
+    blogs,
+    emails
 }
